@@ -10,6 +10,7 @@
       "es2017",
       "dom"
     ],
+    "outDir": "public",
     "rootDir": "src",
     "moduleResolution": "node"
   }
