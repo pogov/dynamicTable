@@ -57,4 +57,12 @@ function tableCreate(data: Data[], selector:string):void {
   tableContainer.append(table);
 }
 
-tableCreate(tableData, '.dynamic-table');
+function init(){
+  const btn: HTMLElement = document.getElementById('initBtn')!;
+  btn.addEventListener('click', () => {
+    tableCreate(tableData, '.dynamic-table')
+    btn.setAttribute('disabled', 'true');
+})
+}
+
+init();

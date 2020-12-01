@@ -1,3 +1,10 @@
+body{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 table {
     display: block;
     /* width: 90%; */
@@ -13,5 +20,9 @@ table {
     border: 1px solid black;
     padding: 5px;
     text-align: center;
+  }
+
+  button{
+    margin-top: 20px;
   }
   

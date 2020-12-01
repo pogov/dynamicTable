@@ -32,4 +32,11 @@ function tableCreate(data, selector) {
     });
     tableContainer.append(table);
 }
-tableCreate(tableData, '.dynamic-table');
+function init() {
+    const btn = document.getElementById('initBtn');
+    btn.addEventListener('click', () => {
+        tableCreate(tableData, '.dynamic-table');
+        btn.setAttribute('disabled', 'true');
+    });
+}
+init();
