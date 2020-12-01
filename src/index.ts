@@ -1,6 +1,6 @@
 import { tableData } from "./data.js";
 
-const emptyArr: Data[] = []
+// const emptyArr: Data[] = []
 
 interface Data {
   _id: string;
@@ -23,7 +23,7 @@ function tableCreate(data: Data[], selector:string):void {
   // if(!isDataAnArray) throw new  Error('Provided data must be an array')
   // if(!isdataArrayNotEmpty) throw new Error('No data to populate table');
 
-  const tableElement:Element = document.querySelector(selector)!;
+  const tableContainer:Element = document.querySelector(selector)!;
   const table: HTMLTableElement = document.createElement("table");
   const tableHead: HTMLTableSectionElement = table.createTHead();
   const tableBody:HTMLTableSectionElement = table.createTBody();
@@ -54,7 +54,7 @@ function tableCreate(data: Data[], selector:string):void {
     tableBody.append(createTableDataRow(dataObjectValuesArray));
   });
 
-  tableElement.append(table);
+  tableContainer.append(table);
 }
 
 tableCreate(tableData, '.dynamic-table');

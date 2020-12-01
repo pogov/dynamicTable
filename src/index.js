@@ -1,11 +1,10 @@
 import { tableData } from "./data.js";
-const emptyArr = [];
 function tableCreate(data, selector) {
     // const isDataAnArray:boolean = Array.isArray(data);
     // const isdataArrayNotEmpty:boolean = data.length > 0;
     // if(!isDataAnArray) throw new  Error('Provided data must be an array')
     // if(!isdataArrayNotEmpty) throw new Error('No data to populate table');
-    const tableElement = document.querySelector(selector);
+    const tableContainer = document.querySelector(selector);
     const table = document.createElement("table");
     const tableHead = table.createTHead();
     const tableBody = table.createTBody();
@@ -31,6 +30,6 @@ function tableCreate(data, selector) {
         const dataObjectValuesArray = Object.values(dataObject);
         tableBody.append(createTableDataRow(dataObjectValuesArray));
     });
-    tableElement.append(table);
+    tableContainer.append(table);
 }
 tableCreate(tableData, '.dynamic-table');
